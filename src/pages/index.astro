@@ -1,0 +1,485 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="John Doe - Lead Développeur Android">
+	<main>
+		<article class="cv-container">
+			<div class="sidebar">
+				<div class="profile">
+					<div class="profile-image">JD</div>
+					<h1>John Doe</h1>
+					<p class="title">Lead Développeur Android</p>
+					<p class="subtitle">Expert en Architecture & Performance</p>
+				</div>
+
+				<section class="contact-info">
+					<h2>Contact</h2>
+					<ul>
+						<li>
+							<span class="icon">📍</span>
+							Paris, France
+						</li>
+						<li>
+							<span class="icon">📧</span>
+							john.doe@email.com
+						</li>
+						<li>
+							<span class="icon">📱</span>
+							+33 6 12 34 56 78
+						</li>
+						<li>
+							<span class="icon">💻</span>
+							github.com/johndoe
+						</li>
+						<li>
+							<span class="icon">🔗</span>
+							linkedin.com/in/johndoe
+						</li>
+					</ul>
+				</section>
+
+				<section class="expertise">
+					<h2>Expertise Technique</h2>
+					<div class="expertise-group">
+						<h3>Android Core</h3>
+						<ul class="expertise-list">
+							<li><span class="expertise-tag advanced">Kotlin</span></li>
+							<li><span class="expertise-tag advanced">Jetpack Compose</span></li>
+							<li><span class="expertise-tag advanced">Coroutines & Flow</span></li>
+							<li><span class="expertise-tag advanced">Clean Architecture</span></li>
+						</ul>
+					</div>
+					<div class="expertise-group">
+						<h3>Architecture</h3>
+						<ul class="expertise-list">
+							<li><span class="expertise-tag advanced">MVVM/MVI</span></li>
+							<li><span class="expertise-tag advanced">Hilt/Dagger</span></li>
+							<li><span class="expertise-tag advanced">Navigation</span></li>
+							<li><span class="expertise-tag">Room</span></li>
+						</ul>
+					</div>
+					<div class="expertise-group">
+						<h3>Testing</h3>
+						<ul class="expertise-list">
+							<li><span class="expertise-tag advanced">JUnit</span></li>
+							<li><span class="expertise-tag advanced">Espresso</span></li>
+							<li><span class="expertise-tag">Mockk</span></li>
+							<li><span class="expertise-tag">Robolectric</span></li>
+						</ul>
+					</div>
+					<div class="expertise-group">
+						<h3>Outils</h3>
+						<ul class="expertise-list">
+							<li><span class="expertise-tag advanced">Android Studio</span></li>
+							<li><span class="expertise-tag advanced">Git</span></li>
+							<li><span class="expertise-tag">Firebase</span></li>
+							<li><span class="expertise-tag">CI/CD</span></li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="languages">
+					<h2>Langues</h2>
+					<ul>
+						<li>
+							Français 
+							<div class="level-bar">
+								<div class="level-fill" style="width: 100%"></div>
+							</div>
+						</li>
+						<li>
+							Anglais 
+							<div class="level-bar">
+								<div class="level-fill" style="width: 90%"></div>
+							</div>
+						</li>
+						<li>
+							Espagnol 
+							<div class="level-bar">
+								<div class="level-fill" style="width: 60%"></div>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</div>
+
+			<div class="main-content">
+				<section class="profile-summary">
+					<h2>Profil</h2>
+					<p>Lead Développeur Android avec 8+ ans d'expérience, spécialisé dans la conception d'architectures évolutives et la création d'applications performantes. Expert en Kotlin et Jetpack Compose, je combine expertise technique approfondie et vision stratégique pour diriger des équipes vers l'excellence technique.</p>
+				</section>
+
+				<section class="technical-expertise">
+					<h2>Expertise Technique Fondamentale</h2>
+					
+					<div class="expertise-item">
+						<h3>Architecture & Design Patterns</h3>
+						<ul>
+							<li>Maîtrise approfondie de Clean Architecture et des patterns MVVM/MVI</li>
+							<li>Expertise en conception d'architectures modulaires avec une forte emphase sur la testabilité</li>
+							<li>Implémentation avancée de Dependency Injection avec Hilt/Dagger</li>
+							<li>Gestion efficace des états avec Kotlin Flow et StateFlow</li>
+						</ul>
+					</div>
+
+					<div class="expertise-item">
+						<h3>Android Framework</h3>
+						<ul>
+							<li>Expertise en Jetpack Compose et Material Design 3</li>
+							<li>Maîtrise des composants Android Architecture (ViewModel, Navigation, Room)</li>
+							<li>Optimisation du cycle de vie des composants et gestion efficace de la mémoire</li>
+							<li>Implémentation de fonctionnalités système avancées (WorkManager, Notifications, Widgets)</li>
+						</ul>
+					</div>
+
+					<div class="expertise-item">
+						<h3>Performance & Optimisation</h3>
+						<ul>
+							<li>Profilage et optimisation des performances (CPU, mémoire, batterie)</li>
+							<li>Détection et résolution des memory leaks et ANRs</li>
+							<li>Optimisation du cold start et du temps de chargement des applications</li>
+							<li>Implémentation de stratégies de mise en cache efficaces</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="experience">
+					<h2>Expérience Professionnelle</h2>
+					
+					<div class="experience-item">
+						<div class="experience-header">
+							<h3>Lead Développeur Android</h3>
+							<p class="company">TechCorp, Paris</p>
+							<p class="date">2020 - Présent</p>
+						</div>
+						<ul>
+							<li>Direction technique d'une équipe de 6 développeurs sur une application de 1M+ utilisateurs</li>
+							<li>Migration réussie vers Jetpack Compose avec 40% de réduction du code UI</li>
+							<li>Mise en place d'une Clean Architecture avec modularisation (20+ modules)</li>
+							<li>Amélioration de 40% des performances de démarrage et réduction de 60% des crashes</li>
+							<li>Mentorat technique et mise en place de standards de code</li>
+						</ul>
+					</div>
+
+					<div class="experience-item">
+						<div class="experience-header">
+							<h3>Développeur Android Senior</h3>
+							<p class="company">MobileFirst, Lyon</p>
+							<p class="date">2018 - 2020</p>
+						</div>
+						<ul>
+							<li>Architecture et développement d'une application de paiement sécurisée</li>
+							<li>Implémentation d'un système de synchronisation offline robuste</li>
+							<li>Mise en place d'une suite de tests complète (couverture > 80%)</li>
+							<li>Optimisation des performances et de la consommation batterie</li>
+						</ul>
+					</div>
+
+					<div class="experience-item">
+						<div class="experience-header">
+							<h3>Développeur Android</h3>
+							<p class="company">StartupInc, Paris</p>
+							<p class="date">2015 - 2018</p>
+						</div>
+						<ul>
+							<li>Développement from scratch d'une application e-commerce</li>
+							<li>Intégration de systèmes de paiement et géolocalisation</li>
+							<li>Mise en place des bonnes pratiques de développement</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="education">
+					<h2>Formation</h2>
+					
+					<div class="education-item">
+						<div class="education-header">
+							<h3>Master en Ingénierie Logicielle</h3>
+							<p class="school">École Polytechnique</p>
+							<p class="date">2013 - 2015</p>
+						</div>
+						<p>Spécialisation en développement mobile et architectures distribuées</p>
+						<ul>
+							<li>Major de promotion</li>
+							<li>Projet de fin d'études : Framework de test pour applications Android</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="projects">
+					<h2>Projets & Contributions</h2>
+					<div class="project-item">
+						<h3>KotlinUtils</h3>
+						<p>Bibliothèque open-source de composants Android réutilisables</p>
+						<ul>
+							<li>2k+ stars sur GitHub</li>
+							<li>Utilisée par 50+ applications en production</li>
+							<li>Composants Compose, utilitaires Kotlin, extensions Android</li>
+						</ul>
+					</div>
+					<div class="project-item">
+						<h3>Android Dev Blog</h3>
+						<p>Blog technique sur le développement Android moderne</p>
+						<ul>
+							<li>5k+ lecteurs mensuels</li>
+							<li>Articles sur l'architecture, la performance et les bonnes pratiques</li>
+							<li>Tutorials sur Jetpack Compose et les dernières technologies Android</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+		</article>
+	</main>
+</Layout>
+
+<style>
+	/* Styles optimisés pour l'impression */
+	@media print {
+		body {
+			margin: 0;
+			padding: 0;
+			background: white;
+		}
+		.cv-container {
+			box-shadow: none !important;
+			margin: 0 !important;
+		}
+		.main-content {
+			padding: 1rem !important;
+		}
+	}
+
+	main {
+		margin: 0 auto;
+		padding: 2rem;
+		background: #f5f5f5;
+		min-height: 100vh;
+	}
+
+	.cv-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+		display: grid;
+		grid-template-columns: 320px 1fr;
+		overflow: hidden;
+	}
+
+	.sidebar {
+		background: linear-gradient(145deg, #1976D2, #2196F3);
+		color: white;
+		padding: 2rem;
+	}
+
+	.profile {
+		text-align: center;
+		margin-bottom: 2.5rem;
+	}
+
+	.profile-image {
+		width: 140px;
+		height: 140px;
+		background: white;
+		color: #1976D2;
+		border-radius: 70px;
+		margin: 0 auto 1.2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 3rem;
+		font-weight: bold;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	}
+
+	.profile h1 {
+		font-size: 2rem;
+		margin: 0;
+		color: white;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.profile .title {
+		font-size: 1.2rem;
+		opacity: 0.95;
+		margin: 0.5rem 0 0.2rem;
+		font-weight: 500;
+	}
+
+	.profile .subtitle {
+		font-size: 0.9rem;
+		opacity: 0.8;
+		margin: 0;
+	}
+
+	.sidebar h2 {
+		color: white;
+		font-size: 1.3rem;
+		margin: 2rem 0 1rem;
+		border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+		padding-bottom: 0.5rem;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.sidebar h3 {
+		color: white;
+		font-size: 1.1rem;
+		margin: 1.2rem 0 0.8rem;
+		opacity: 0.9;
+	}
+
+	.contact-info ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.contact-info li {
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		font-size: 0.95rem;
+	}
+
+	.icon {
+		font-size: 1.3rem;
+		opacity: 0.9;
+	}
+
+	.expertise-list {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.6rem;
+		margin: 0.5rem 0;
+	}
+
+	.expertise-tag {
+		background: rgba(255, 255, 255, 0.15);
+		padding: 0.4rem 0.9rem;
+		border-radius: 20px;
+		font-size: 0.9rem;
+		transition: all 0.3s ease;
+	}
+
+	.expertise-tag.advanced {
+		background: rgba(255, 255, 255, 0.25);
+		font-weight: 500;
+	}
+
+	.expertise-tag:hover {
+		background: rgba(255, 255, 255, 0.3);
+		transform: translateY(-1px);
+	}
+
+	.languages ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.languages li {
+		margin-bottom: 1rem;
+	}
+
+	.level-bar {
+		height: 6px;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 3px;
+		margin-top: 0.4rem;
+		overflow: hidden;
+	}
+
+	.level-fill {
+		height: 100%;
+		background: rgba(255, 255, 255, 0.8);
+		border-radius: 3px;
+		transition: width 0.3s ease;
+	}
+
+	.main-content {
+		padding: 2.5rem;
+		background: white;
+	}
+
+	.main-content h2 {
+		color: #1976D2;
+		font-size: 1.6rem;
+		margin: 0 0 1.2rem;
+		border-bottom: 2px solid #e0e0e0;
+		padding-bottom: 0.6rem;
+	}
+
+	.experience-item, .education-item, .project-item, .expertise-item {
+		margin-bottom: 2rem;
+	}
+
+	.experience-header, .education-header {
+		margin-bottom: 0.8rem;
+	}
+
+	.experience-header h3, .education-header h3 {
+		color: #2c3e50;
+		font-size: 1.2rem;
+		margin: 0;
+	}
+
+	.company, .school {
+		color: #1976D2;
+		font-weight: 600;
+		margin: 0.3rem 0;
+		font-size: 1.1rem;
+	}
+
+	.date {
+		color: #666;
+		font-size: 0.9rem;
+		margin: 0;
+	}
+
+	.main-content ul {
+		margin: 0.8rem 0;
+		padding-left: 1.2rem;
+	}
+
+	.main-content li {
+		margin-bottom: 0.5rem;
+		line-height: 1.5;
+		color: #444;
+	}
+
+	.profile-summary p {
+		line-height: 1.7;
+		color: #2c3e50;
+		font-size: 1.1rem;
+	}
+
+	.project-item h3 {
+		color: #2c3e50;
+		font-size: 1.2rem;
+		margin: 0 0 0.4rem;
+	}
+
+	.project-item p {
+		margin: 0 0 0.5rem;
+		color: #666;
+		font-size: 1rem;
+	}
+
+	.expertise-item h3 {
+		color: #2c3e50;
+		font-size: 1.2rem;
+		margin: 1.5rem 0 0.8rem;
+	}
+
+	section {
+		margin-bottom: 2.5rem;
+	}
+
+	section:last-child {
+		margin-bottom: 0;
+	}
+</style>

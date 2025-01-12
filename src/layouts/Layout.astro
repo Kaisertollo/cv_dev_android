@@ -1,0 +1,46 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="CV Développeur Android Senior" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 33, 118, 210;
+		--accent-light: 33, 150, 243;
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #f5f5f5;
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		margin: 0;
+		padding: 1rem;
+	}
+	@media print {
+		html {
+			background: white;
+		}
+		body {
+			padding: 0;
+		}
+	}
+</style>
