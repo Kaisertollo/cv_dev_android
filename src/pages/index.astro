@@ -142,6 +142,8 @@ import Layout from '../layouts/Layout.astro';
 							<li>Profilage et optimisation des performances (CPU, mémoire, batterie)</li>
 							<li>Détection et résolution des memory leaks et ANRs</li>
 							<li>Optimisation du cold start et du temps de chargement des applications</li>
+							<br/>
+							<br/>	
 							<li>Implémentation de stratégies de mise en cache efficaces</li>
 						</ul>
 					</div>
@@ -247,15 +249,19 @@ import Layout from '../layouts/Layout.astro';
 			filename: 'cv.pdf',
 			image: { type: 'jpeg', quality: 0.98 },
 			html2canvas: { 
-				scale: 2,
+				scale: 3,
 				useCORS: true,
 				letterRendering: true,
-				scrollY: 0
+				scrollY: 0,
+				windowWidth: document.documentElement.offsetWidth, // Set the window width
+				windowHeight: document.documentElement.offsetHeight
+				
 			},
 			jsPDF: { 
 				unit: 'mm', 
 				format: 'a4', 
-				orientation: 'portrait'
+				orientation: 'portrait',
+				compressPDF: true // Enable PDF compressio
 			}
 		};
 
@@ -294,41 +300,7 @@ import Layout from '../layouts/Layout.astro';
 		position: relative;
 	}
 
-	@media print {
-		body {
-			margin: 0;
-			padding: 0;
-			background: white;
-			-webkit-print-color-adjust: exact !important;
-			print-color-adjust: exact !important;
-		}
-
-		.cv-container {
-			width: 210mm !important;
-			margin: 0 !important;
-			padding: 0 !important;
-			grid-template-columns: 80mm 1fr !important;
-			box-shadow: none !important;
-			position: relative !important;
-			overflow: visible !important;
-		}
-
-		.sidebar {
-			padding: 15mm 10mm !important;
-			background: linear-gradient(145deg, #1976D2, #2196F3) !important;
-			-webkit-print-color-adjust: exact !important;
-			print-color-adjust: exact !important;
-		}
-
-		.main-content {
-			padding: 15mm !important;
-		}
-
-		section {
-			page-break-inside: avoid !important;
-		}
-	}
-
+	
 	/* Styles de base */
 	.profile {
 		text-align: center;
