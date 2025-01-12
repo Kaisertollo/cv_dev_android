@@ -4,6 +4,9 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="John Doe - Lead Développeur Android">
 	<main>
+		<button id="downloadPDF" class="download-pdf-btn">
+			<span class="icon">📄</span> Télécharger PDF
+		</button>
 		<article class="cv-container">
 			<div class="sidebar">
 				<div class="profile">
@@ -233,47 +236,100 @@ import Layout from '../layouts/Layout.astro';
 	</main>
 </Layout>
 
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+	document.getElementById('downloadPDF').addEventListener('click', async function() {
+		const element = document.querySelector('.cv-container');
+		
+		// Configuration simple pour éviter les erreurs
+		const opt = {
+			margin: 0,
+			filename: 'cv.pdf',
+			image: { type: 'jpeg', quality: 0.98 },
+			html2canvas: { 
+				scale: 2,
+				useCORS: true,
+				letterRendering: true,
+				scrollY: 0
+			},
+			jsPDF: { 
+				unit: 'mm', 
+				format: 'a4', 
+				orientation: 'portrait'
+			}
+		};
+
+		try {
+			// Utilisation de la méthode simple
+			await html2pdf().from(element).set(opt).save();
+		} catch (error) {
+			console.error('Error generating PDF:', error);
+		}
+	});
+</script>
+
 <style>
-	/* Styles optimisés pour l'impression */
-	@media print {
-		body {
-			margin: 0;
-			padding: 0;
-			background: white;
-		}
-		.cv-container {
-			box-shadow: none !important;
-			margin: 0 !important;
-		}
-		.main-content {
-			padding: 1rem !important;
-		}
-	}
-
-	main {
-		margin: 0 auto;
-		padding: 2rem;
-		background: #f5f5f5;
-		min-height: 100vh;
-	}
-
 	.cv-container {
-		max-width: 1200px;
+		width: 210mm;
 		margin: 0 auto;
 		background: white;
-		border-radius: 12px;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 		display: grid;
-		grid-template-columns: 320px 1fr;
-		overflow: hidden;
+		grid-template-columns: 300px 1fr;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+		position: relative;
+		overflow: visible;
+		min-height: auto;
 	}
 
 	.sidebar {
 		background: linear-gradient(145deg, #1976D2, #2196F3);
 		color: white;
 		padding: 2rem;
+		position: relative;
 	}
 
+	.main-content {
+		padding: 2rem;
+		background: white;
+		position: relative;
+	}
+
+	@media print {
+		body {
+			margin: 0;
+			padding: 0;
+			background: white;
+			-webkit-print-color-adjust: exact !important;
+			print-color-adjust: exact !important;
+		}
+
+		.cv-container {
+			width: 210mm !important;
+			margin: 0 !important;
+			padding: 0 !important;
+			grid-template-columns: 80mm 1fr !important;
+			box-shadow: none !important;
+			position: relative !important;
+			overflow: visible !important;
+		}
+
+		.sidebar {
+			padding: 15mm 10mm !important;
+			background: linear-gradient(145deg, #1976D2, #2196F3) !important;
+			-webkit-print-color-adjust: exact !important;
+			print-color-adjust: exact !important;
+		}
+
+		.main-content {
+			padding: 15mm !important;
+		}
+
+		section {
+			page-break-inside: avoid !important;
+		}
+	}
+
+	/* Styles de base */
 	.profile {
 		text-align: center;
 		margin-bottom: 2.5rem;
@@ -354,26 +410,27 @@ import Layout from '../layouts/Layout.astro';
 		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.6rem;
+		gap: 0.8rem;
 		margin: 0.5rem 0;
 	}
 
 	.expertise-tag {
-		background: rgba(255, 255, 255, 0.15);
-		padding: 0.4rem 0.9rem;
-		border-radius: 20px;
+		background: rgba(255, 255, 255, 0.12);
+		padding: 0.5rem 1rem;
+		border-radius: 25px;
 		font-size: 0.9rem;
-		transition: all 0.3s ease;
+		transition: all 0.2s ease;
+		display: inline-block;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		border: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	.expertise-tag.advanced {
-		background: rgba(255, 255, 255, 0.25);
+		background: rgba(255, 255, 255, 0.2);
 		font-weight: 500;
-	}
-
-	.expertise-tag:hover {
-		background: rgba(255, 255, 255, 0.3);
-		transform: translateY(-1px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 	}
 
 	.languages ul {
@@ -398,11 +455,6 @@ import Layout from '../layouts/Layout.astro';
 		background: rgba(255, 255, 255, 0.8);
 		border-radius: 3px;
 		transition: width 0.3s ease;
-	}
-
-	.main-content {
-		padding: 2.5rem;
-		background: white;
 	}
 
 	.main-content h2 {
@@ -469,17 +521,45 @@ import Layout from '../layouts/Layout.astro';
 		font-size: 1rem;
 	}
 
-	.expertise-item h3 {
-		color: #2c3e50;
-		font-size: 1.2rem;
-		margin: 1.5rem 0 0.8rem;
-	}
-
 	section {
 		margin-bottom: 2.5rem;
 	}
 
 	section:last-child {
 		margin-bottom: 0;
+	}
+
+	.download-pdf-btn {
+		position: fixed;
+		bottom: 2rem;
+		right: 2rem;
+		background: #2563eb;
+		color: white;
+		border: none;
+		padding: 0.75rem 1.5rem;
+		border-radius: 0.5rem;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 1rem;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		transition: transform 0.2s, background 0.2s;
+		z-index: 1000;
+	}
+
+	.download-pdf-btn:hover {
+		background: #1d4ed8;
+		transform: translateY(-2px);
+	}
+
+	.download-pdf-btn .icon {
+		font-size: 1.2rem;
+	}
+
+	@media print {
+		.download-pdf-btn {
+			display: none;
+		}
 	}
 </style>
