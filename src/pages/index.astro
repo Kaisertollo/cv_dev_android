@@ -2,554 +2,252 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Ousmane Sakho - Développeur Android">
-	<main>
-		<button id="downloadPDF" class="download-pdf-btn">
-			<span class="icon">📄</span> Télécharger PDF
+<Layout title="Ousmane Sakho - Senior Mobile Engineer">
+	<main class="page-wrapper">
+		<button id="downloadPDF" class="download-pdf-btn" aria-label="Télécharger le CV en PDF">
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+			<span>PDF</span>
 		</button>
-		<article class="cv-container">
-			<header class="header">
-				<div class="profile-image">OS</div>
-				<div class="profile-info">
-					<h1>Ousmane Sakho</h1>
-					<p class="title">Développeur Android</p>
-					<p class="subtitle">Expert en Développement Mobile</p>
+		
+		<div class="cv-container">
+			<aside class="sidebar">
+				<div class="profile-header">
+					<div class="profile-image">
+						<span>OS</span>
+					</div>
+					<h1 class="name">Ousmane Sakho</h1>
+					<h2 class="job-title">Senior Mobile Engineer</h2>
+					<p class="verification-badge">Android & Flutter Expert</p>
 				</div>
-				<div class="contact-grid">
+
+				<div class="sidebar-section contact-info">
 					<div class="contact-item">
-							<span class="icon">📍</span>
-						<span>Cite ADE, 140, Rufisque, Sénégal</span>
-					</div>
-					<div class="contact-item">
-							<span class="icon">📧</span>
-						<span>tollosakho@gmail.com</span>
-					</div>
-					<div class="contact-item">
-							<span class="icon">📱</span>
-						<span>+221 78-142-28-45</span>
+						<span class="icon">📍</span>
+						<span>Cite ADE, 140,<br/>Rufisque, Sénégal</span>
 					</div>
 					<div class="contact-item">
-						<span class="icon">📅</span>
-						<span>21 mars 1997, Dakar</span>
+						<span class="icon">📧</span>
+						<a href="mailto:tollosakho@gmail.com">tollosakho@gmail.com</a>
 					</div>
-				</div>
-			</header>
-
-			<section class="section">
-				<h2 class="section-title">Profil</h2>
-				<p>Développeur Android passionné avec une solide expérience dans le développement d'applications mobiles modernes. Expertise en Kotlin, Java et technologies Android récentes comme Jetpack Compose. Capable de mener des projets de la conception à la mise en production, avec un fort accent sur la qualité du code et l'expérience utilisateur.</p>
-				</section>
-
-			<section class="section">
-				<h2 class="section-title">Expertise Technique</h2>
-				<div class="expertise-grid">
-					<div class="expertise-category">
-						<h3>Android Core</h3>
-						<div class="tags-container">
-							<span class="tag advanced">Kotlin</span>
-							<span class="tag advanced">Java</span>
-							<span class="tag advanced">Jetpack Compose</span>
-							<span class="tag advanced">Clean Architecture</span>
-						</div>
+					<div class="contact-item">
+						<span class="icon">📱</span>
+						<a href="tel:+221781422845">+221 78-142-28-45</a>
 					</div>
-					<div class="expertise-category">
-						<h3>Frameworks & Outils</h3>
-						<div class="tags-container">
-							<span class="tag advanced">Firebase</span>
-							<span class="tag advanced">Room Database</span>
-							<span class="tag advanced">Retrofit</span>
-							<span class="tag advanced">MapBox</span>
-							<span class="tag advanced">Flutter</span>
-							<span class="tag advanced">Google Maps SDK</span>
-						</div>
-					</div>
-					<div class="expertise-category">
-						<h3>DevOps & Outils</h3>
-						<div class="tags-container">
-							<span class="tag advanced">Git/GitHub</span>
-							<span class="tag">Docker</span>
-							<span class="tag">Figma</span>
-							<span class="tag advanced">Agile/Scrum</span>
-							<span class="tag">Jira</span>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="section">
-				<h2 class="section-title">Langues</h2>
-				<div class="languages-grid">
-					<div class="language-item">
-						<p>Français</p>
-						<div class="level-bar">
-							<div class="level-fill" style="width: 100%"></div>
-						</div>
-					</div>
-					<div class="language-item">
-						<p>Anglais</p>
-						<div class="level-bar">
-							<div class="level-fill" style="width: 70%"></div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="section">
-				<h2 class="section-title">Expérience Professionnelle</h2>
-				<div class="experience-item">
-					<div class="experience-header">
-						<h3>Consultant Développeur Android</h3>
-						<p class="company">La Poste France</p>
-						<p class="date">Octobre 2025 - Présent</p>
-					</div>
-					<div class="experience-subheader">
-						<p class="context">Mission de consultance sur l'application Preliv, utilisée par les facteurs pour les travaux de préparation. Prise en charge du module Colis District et développement d'une solution indépendante.</p>
-					</div>
-					<div class="project-section">
-						<h4>Colis District & Gestion des Anomalies</h4>
-						<ul>
-							<li>Prise en charge et correction des anomalies sur le module "Colis District" de l'application Preliv.</li>
-							<li>Conception et développement d'une application "Colis District" indépendante pour optimiser le traitement des colis.</li>
-							<li>Développement modernisé avec Kotlin et Jetpack Compose.</li>
-							<li>Utilisation de Firebase et Firestore pour la synchronisation et la gestion des données en temps réel.</li>
-						</ul>
-					</div>
-					<div class="technologies">
-						<span class="tech-tag">Kotlin</span>
-						<span class="tech-tag">Jetpack Compose</span>
-						<span class="tech-tag">Firebase</span>
-						<span class="tech-tag">Firestore</span>
-						<span class="tech-tag">Android SDK</span>
+					<div class="contact-item">
+						<span class="icon">🔗</span>
+						<a href="#" target="_blank">linkedin.com/in/ousmane</a>
 					</div>
 				</div>
 
-
-
-				<div class="experience-item">
-					<div class="experience-header">
-						<h3>Consultant Expert Mobile & Modernisation</h3>
-						<p class="company">Obertys</p>
-						<p class="date">Septembre 2024 - prèsent</p>
-					</div>
-					<div class="experience-subheader">
-						<p class="context">Mission de modernisation complète de la plateforme Marlodj (Gestion de Files d'Attente) et optimisation des processus de développement.</p>
-					</div>
-					<div class="project-section">
-						<h4>Modernisation & Architecture</h4>
-						<ul>
-							<li>Conception et déploiement d'un nouveau backend avec migration progressive des fonctionnalités (Backporting).</li>
-							<li>Développement d'un Backoffice moderne pour une gestion centralisée plus efficace.</li>
-							<li>Refonte visuelle complète des applications mobiles pour une expérience utilisateur améliorée.</li>
-							<li>Implémentation de la continuité de service (Offline-first) pour garantir le fonctionnement en zones à faible connectivité.</li>
-						</ul>
-					</div>
-					<div class="project-section">
-						<h4>Méthodologie & IA</h4>
-						<ul>
-							<li>Utilisation intensive d'outils IA modernes (Cursor, Google Antigravity, Claude Code, GLM 4.7) pour accélérer le développement.</li>
-							<li>Capacité à gérer plusieurs stacks technologiques simultanément grâce à l'assistance IA.</li>
-						</ul>
-					</div>
-					<div class="technologies">
-						<span class="tech-tag">Flutter</span>
-						<span class="tech-tag">Kotlin</span>
-						<span class="tech-tag">AI Tools</span>
-						<span class="tech-tag">Offline-first</span>
-						<span class="tech-tag">Backend Modernization</span>
-					</div>
-				</div>
-
-				<div class="experience-item">
-					<div class="experience-header">
-						<h3>Développeur Android & Flutter</h3>
-						<p class="company">Intouch</p>
-						<p class="date">Octobre 2024 - Présent</p>
-					</div>
-					<div class="experience-subheader">
-						<p class="context">Développement d'applications Android et Flutter pour les solutions de paiement mobile d'Intouch.</p>
-					</div>
-					<div class="project-section">
-						<h4>Application TouchPoint AIO</h4>
-						<ul>
-							<li>Développement et maintenance de l'application marchande principale permettant l'acceptation des paiements (Mobile Money, Carte, Coupons, Espèces).</li>
-							<li>Implémentation du système de gestion de la fidélité clients avec tracking des points et récompenses.</li>
-							<li>Conception du système innovant de rendu monnaie avec les services (crédit téléphonique, mobile money, points de fidélité).</li>
-							<li>Intégration de la distribution de services digitaux pour des revenus supplémentaires et des services à valeur ajoutée.</li>
-						</ul>
-					</div>
-					<div class="project-section">
-						<h4>Application Ting Business (Flutter)</h4>
-						<ul>
-							<li>Développement de la nouvelle version multiplateforme de l'application AIO, plus stable et moderne.</li>
-							<li>Intégration des fonctionnalités marchandes essentielles : encaissement, reporting et settlement.</li>
-							<li>Implémentation de nouvelles fonctionnalités comme le Tap to Pay (partenariat Visa et Cybersource) et la gestion de caisse.</li>
-							<li>Intégration de la plateforme d'interopérabilité de la BCEAO pour les encaissements Pi et le settlement via carte bancaire.</li>
-						</ul>
-					</div>
-					<div class="project-section">
-						<h4>Application d'Onboarding (Flutter)</h4>
-						<ul>
-							<li>Développement d'une application Flutter permettant aux commerciaux d'onboarder des marchands sur le terrain.</li>
-							<li>Intégration d'un système de configuration de QR code pour les marchands.</li>
-							<li>Optimisation des processus d'enrôlement pour une utilisation fluide sur le terrain.</li>
-						</ul>
-					</div>
-					<div class="technologies">
-						<span class="tech-tag">Kotlin</span>
-						<span class="tech-tag">Flutter</span>
-						<span class="tech-tag">Firebase</span>
-						<span class="tech-tag">Jetpack Compose</span>
-						<span class="tech-tag">Clean Architecture</span>
-						<span class="tech-tag">QR Code</span>
-						<span class="tech-tag">Mobile Payment APIs</span>
-						<span class="tech-tag">Loyalty Systems</span>
-					</div>
-				</div>
-
-				<div class="experience-item">
-					<div class="experience-header">
-						<h3>Consultant Développeur Android</h3>
-						<p class="company">Kajou </p>
-						<p class="date">Décembre 2023 - Décembre 2024</p>
-					</div>
-					<div class="experience-subheader">
-						<p class="context">Contribution au développement de l'application Kajou , une solution innovante permettant l'accès à des contenus éducatifs de qualité sans connexion internet via une carte SD, destinée aux 50% de la population mondiale ayant un accès limité ou nul à Internet.</p>
-					</div>
-					<div class="project-section">
-						<h4>Contributions</h4>
-						<ul>
-							<li>Développement de fonctionnalités pour la navigation et la consultation de contenus hors-ligne.</li>
-							<li>Implémentation du système de partage de contenus via Bluetooth entre utilisateurs.</li>
-							<li>Optimisation de la gestion des ressources stockées sur la carte SD et en base de données locale.</li>
-							<li>Amélioration de l'expérience utilisateur pour la navigation dans la bibliothèque de contenus.</li>
-							<li>Support multilingue pour rendre le contenu accessible dans les langues locales.</li>
-							<li>Participation active aux cérémonies Agile (Daily Scrum, Sprint Planning, Retrospectives) pour assurer une livraison efficace.</li>
-						</ul>
-					</div>
-					<div class="technologies">
-						<span class="tech-tag">Kotlin</span>
-						<span class="tech-tag">Android SDK</span>
-						<span class="tech-tag">Room Database</span>
-						<span class="tech-tag">Bluetooth API</span>
-						<span class="tech-tag">SQLite</span>
-						<span class="tech-tag">Storage Access Framework</span>
-						<span class="tech-tag">Agile/Scrum</span>
-					</div>
-				</div>
-
-				<div class="experience-item">
-					<div class="experience-header">
-						<h3>Développeur Android</h3>
-						<p class="company">ATOS</p>
-						<p class="date">Avril 2023 - Septembre 2024</p>
-					</div>
-					<div class="experience-subheader">
-						<p class="context">En tant que consultant pour La Poste Française et développeur Android chez ATOS, j'ai joué un rôle clé dans la maintenance et l'amélioration des applications, en mettant l'accent sur la qualité du code et l'optimisation des performances.</p>
-					</div>
-					<div class="project-section">
-						<h4>Consulting pour La Poste Française</h4>
-						<ul>
-							<li>Réduction significative des crashs en production grâce à la correction d'anomalies critiques.</li>
-							<li>Amélioration de la maintenabilité du code avec un refactoring, optimisant les délais de résolution.</li>
-							<li>Participation active aux sprints Agile/Scrum, contribuant à l'amélioration continue des processus.</li>
-						</ul>
-					</div>
-					<div class="project-section">
-						<h4>Application Coffre-Fort</h4>
-						<ul>
-							<li>Conception et développement d'une application sécurisée de gestion de documents avec cryptage avancé.</li>
-							<li>Intégration de Firebase pour la synchronisation en temps réel.</li>
-							<li>Réalisation de tests automatisés avec Android Espresso pour garantir la qualité du code.</li>
-							
-						</ul>
-					</div>
-					<div class="project-section">
-						<h4>Application MoveEase</h4>
-						<ul>
-							<li>Développement d'une application de transport en commun pour Dakar, largement adoptée par les usagers.</li>
-							<li>Intégration de Google Maps et APIs locales pour des itinéraires en temps réel.</li>
-							<li>Création d'une interface moderne avec Jetpack Compose.</li>
-							<li>Tests rigoureux des fonctionnalités de géolocalisation pour assurer la précision et la fiabilité.</li>
-						</ul>
-					</div>
-				
-					<div class="project-section">
-						<h4>Projets Internes</h4>
-						<ul>
-							<li>Développement d'une application de billetterie avec système d'envoi automatique des tickets par email.</li>
-							<li>Gestion des données de vente via Firebase Realtime Database avec export CSV par email.</li>
-							<li>Intégration d'un système de suivi des tickets vendus et de leur statut.</li>
-						</ul>
-							</div>
-					<div class="technologies">
-						<span class="tech-tag">Kotlin</span>
-						<span class="tech-tag">Jetpack Compose</span>
-						<span class="tech-tag">Firebase</span>
-						<span class="tech-tag">Retrofit</span>
-						<span class="tech-tag">Google Maps SDK</span>
-						<span class="tech-tag">Espresso</span>
-						<span class="tech-tag">Clean Architecture</span>
-						<span class="tech-tag">MVVM</span>
-						<span class="tech-tag">Coroutines</span>
-						<span class="tech-tag">Flow</span>
-						<span class="tech-tag">Room Database</span>
-						<span class="tech-tag">Dagger Hilt</span>
-						<span class="tech-tag">Unit Testing</span>
-							</div>
-			</div>
-
-			
-				<div class="experience-item">
-					<div class="experience-header">
-						<h3>Développeur Android</h3>
-						<p class="company">MEKKA</p>
-						<p class="date">Février 2023 - Avril 2023</p>
-					</div>
-					<div class="experience-subheader">
-						<p class="context">Développement de l'application POS Mekka, destinée aux agents de terrain pour la collecte de cash auprès des marchands partenaires, remplaçant un processus manuel sujet aux erreurs.</p>
-					</div>
-					<div class="project-section">
-						<h4>Contributions</h4>
-						<ul>
-							<li>Analyse des besoins des clients pour définir les fonctionnalités essentielles de l'application.</li>
-							<li>Conception et intégration d'interfaces utilisateur à partir de maquettes Figma avec Jetpack Compose.</li>
-							<li>Implémentation des fonctionnalités clés, y compris la gestion des transactions, la validation des données et les notifications en temps réel avec Firebase Cloud Messaging.</li>
-							<li>Automatisation des tests à l'aide d'Android Espresso, assurant une couverture de tests complète.</li>
-							
-						</ul>
-					</div>
-					<div class="results-section">
-						<h4>Résultats</h4>
-						<ul>
-							<li>Réduction significative des erreurs de traitement des transactions.</li>
-							<li>Adoption rapide par les agents de terrain après la formation initiale.</li>
-						</ul>
-					</div>
-					<div class="technologies">
-						<span class="tech-tag">Kotlin</span>
-						<span class="tech-tag">Jetpack Compose</span>
-						<span class="tech-tag">Firebase (Cloud Messaging, Crashlytics)</span>
-						<span class="tech-tag">Retrofit</span>
-						<span class="tech-tag">Gradle</span>
-						<span class="tech-tag">Android Espresso</span>
-					</div>
-					</div>
-
-				<div class="experience-item">
-					<div class="experience-header">
-						<h3>Mobile Developer → Lead Mobile Developer</h3>
-						<p class="company">Obertys</p>
-						<p class="date">Novembre 2019 - Avril 2023</p>
-					</div>
-					<div class="experience-subheader">
-						<p class="context">Au sein d'Obertys, j'ai évolué de Mobile Developer à Lead Mobile Developer, supervisant le développement et la maintenance de plusieurs produits mobiles pour des clients dans différents pays d'Afrique. J'ai conçu et livré des solutions innovantes, notamment des applications permettant la gestion de KYC, des files d'attente, et des transactions bancaires en mode offline.</p>
-					</div>
-					<div class="project-section">
-						<h4>Customer Corner</h4>
-						<ul>
-							<li>Application Android en Java permettant de réaliser des opérations de KYC en mode offline, avec synchronisation ultérieure des données via OCR.</li>
-							<li>Intégration de l'OCR pour la capture et l'analyse des documents officiels.</li>
-							<li>Gestion des dossiers de crédit et des transactions en mode offline, avec synchronisation sécurisée en ligne.</li>
-							<li>Optimisation des workflows pour un usage dans des environnements avec connectivité limitée.</li>
-							<li>Clients : Manko, Advans Côte d'Ivoire, AMIFA Mali, COPEC Congo.</li>
-						</ul>
-					</div>
-					<div class="project-section">
-						<h4>Marlodj (GFA – Gestion de Files d'Attente)</h4>
-						<ul>
-							<li>Suite de 4 applications mobiles conçues pour gérer les files d'attente dans des agences bancaires et améliorer l'expérience client.</li>
-							<li>Application Agence (Android Java) : Permet la prise de tickets en agence via une borne interactive.</li>
-							<li>Application Caisse (Android Java) : Gestion des files d'attente en temps réel.</li>
-							<li>Application Android TV : Appel des clients via synthèse vocale (TTS) et diffusion de messages multimédias.</li>
-							<li>Application Mobile Client (Flutter) : Prise de tickets à distance, localisation des agences, suivi en temps réel.</li>
-							<li>Client principal : Ecobank.</li>
-						</ul>
-					</div>
-					<div class="role-section">
-						<h4>Rôle en tant que Lead Mobile Developer</h4>
-						<ul>
-							<li>Supervision des équipes de développement mobile, assurant la qualité et la livraison des projets dans les délais.</li>
-							<li>Définition des architectures logicielles basées sur Clean Architecture et MVVM.</li>
-							<li>Coordination entre les équipes backend et mobile pour l'intégration des APIs.</li>
-							<li>Conception et implémentation des tests automatisés pour garantir la robustesse des applications.</li>
-							<li>Formation des développeurs juniors et animation de sessions de transfert de connaissances.</li>
-						</ul>
-					</div>
-					<div class="role-section">
-						<h4>Architecture et Développement</h4>
-						<ul>
-							<li>Mise en place d'une Clean Architecture avec séparation des couches (data, domain, presentation) pour une meilleure maintenabilité.</li>
-							<li>Implémentation du pattern MVVM avec LiveData/StateFlow pour une gestion réactive des états.</li>
-							<li>Utilisation de Coroutines et Flow pour la gestion asynchrone et réactive des données.</li>
-							<li>Intégration de Dagger Hilt pour l'injection de dépendances.</li>
-							<li>Mise en place de Room Database pour la persistance locale des données.</li>
-			
-						</ul>
-					</div>
-					<div class="results-section">
-						<h4>Résultats obtenus</h4>
-						<ul>
-							<li>Amélioration notable de la précision des opérations KYC grâce à l'intégration de l'OCR dans Customer Corner.</li>
-							<li>Optimisation significative de l'efficacité opérationnelle dans les agences grâce à Marlodj.</li>
-							<li>Forte adoption des applications par les utilisateurs finaux, particulièrement l'application mobile Flutter de Marlodj.</li>
-							<li>Diminution importante des bugs en production grâce à l'implémentation rigoureuse de tests automatisés.</li>
-						</ul>
-					</div>
-					<div class="technologies">
-						<span class="tech-tag">Kotlin</span>
-						<span class="tech-tag">Java</span>
-						<span class="tech-tag">Flutter (Dart)</span>
-						<span class="tech-tag">Jetpack Compose</span>
-						<span class="tech-tag">Clean Architecture</span>
-						<span class="tech-tag">MVVM</span>
-						<span class="tech-tag">Coroutines</span>
-						<span class="tech-tag">Flow</span>
-						<span class="tech-tag">Room Database</span>
-						<span class="tech-tag">Dagger Hilt</span>
-						<span class="tech-tag">Retrofit</span>
-						<span class="tech-tag">Firebase</span>
-						<span class="tech-tag">TTS</span>
-						<span class="tech-tag">OCR SDK</span>
-						<span class="tech-tag">Google Maps API</span>
-						<span class="tech-tag">Location API</span>
-						
-					</div>
-				</div>
+				<div class="sidebar-section">
+					<h3 class="sidebar-title">Expertise Technique</h3>
 					
-					<div class="experience-item">
-						<div class="experience-header">
-						<h3>Analyste Données et Développeur Web</h3>
-						<p class="company">IPRES</p>
-						<p class="date">Juillet 2019 - Novembre 2019</p>
-					</div>
-					<div class="experience-subheader">
-						<p class="context">Développement d'une plateforme web pour centraliser et visualiser les données collectées sur le terrain.</p>
-					</div>
-					<div class="project-section">
-						<h4>Contributions</h4>
-						<ul>
-							<li>Analyse et nettoyage des données collectées pour éliminer les doublons et incohérences.</li>
-							<li>Développement de la plateforme en Laravel, intégrant des visualisations interactives avec Chart.js.</li>
-							<li>Conception d'interfaces utilisateur responsive avec Bootstrap, améliorant l'accessibilité sur mobile.</li>
-						</ul>
+					<div class="skill-group">
+						<h4>Core Mobile</h4>
+						<div class="tags-wrapper">
+							<span class="tag filled">Kotlin</span>
+							<span class="tag filled">Java</span>
+							<span class="tag filled">Dart</span>
+							<span class="tag filled">Jetpack Compose</span>
+							<span class="tag filled">Flutter</span>
 						</div>
-					<div class="results-section">
-						<h4>Résultats</h4>
-						<ul>
-							<li>Amélioration significative de la fiabilité des rapports générés.</li>
-							<li>Réduction notable des erreurs dans les données.</li>
-						</ul>
-					</div>
-					<div class="technologies">
-						<span class="tech-tag">Laravel</span>
-						<span class="tech-tag">MySQL</span>
-						<span class="tech-tag">JavaScript (Chart.js)</span>
-						<span class="tech-tag">Bootstrap</span>
-					</div>
 					</div>
 
-					<div class="experience-item">
-						<div class="experience-header">
-						<h3>Développeur Web</h3>
-						<p class="company">ACAN</p>
-						<p class="date">Mars 2019 - Juin 2019</p>
-					</div>
-					<div class="experience-subheader">
-						<p class="context">Digitalisation d'un processus métier complexe pour améliorer la productivité de l'entreprise.</p>
-					</div>
-					<div class="project-section">
-						<h4>Contributions</h4>
-						<ul>
-							<li>Conception d'une base de données relationnelle optimisée avec MySQL pour gérer les processus internes.</li>
-							<li>Développement d'une application web en Symfony avec des interfaces intuitives et responsive.</li>
-							<li>Automatisation des tâches manuelles, optimisant significativement le temps de traitement.</li>
-						</ul>
+					<div class="skill-group">
+						<h4>Architecture & Méthodes</h4>
+						<div class="tags-wrapper">
+							<span class="tag">Clean Arch</span>
+							<span class="tag">Agile/Scrum</span>
+							<span class="tag">CI/CD</span>
+							<span class="tag">Code Review</span>
+							<span class="tag">Jira/GitFlow</span>
+							<span class="tag">Offline-first</span>
 						</div>
-					<div class="results-section">
-						<h4>Résultats</h4>
-						<ul>
-							<li>Amélioration notable de la productivité de l'équipe.</li>
-							<li>Adoption rapide par les utilisateurs finaux après la formation.</li>
-						</ul>
-					</div>
-					<div class="technologies">
-						<span class="tech-tag">Symfony</span>
-						<span class="tech-tag">MySQL</span>
-						<span class="tech-tag">Bootstrap</span>
-						<span class="tech-tag">JavaScript</span>
-					</div>
 					</div>
 
-					<div class="experience-item">
-						<div class="experience-header">
-							<h3>Développeur Android</h3>
-						<p class="company">WALLOU</p>
-						<p class="date">Décembre 2022 - Février 2023</p>
-					</div>
-					<div class="experience-subheader">
-						<p class="context">Création d'une application Android mettant en relation les dépanneurs et les clients, permettant des interventions rapides et transparentes.</p>
+					<div class="skill-group">
+						<h4>Tools & Backend</h4>
+						<div class="tags-wrapper">
+							<span class="tag">Firebase</span>
+							<span class="tag">Node/Laravel</span>
+							<span class="tag">Docker</span>
+							<span class="tag">Git/GitHub</span>
+							<span class="tag">Figma</span>
 						</div>
-					<div class="project-section">
-						<h4>Contributions</h4>
-						<ul>
-							<li>Analyse des besoins métier et digitalisation du processus de mise en relation.</li>
-							<li>Conception et intégration d'un système de géolocalisation avec Mapbox SDK et Android Location API pour des itinéraires optimisés.</li>
-							<li>Implémentation des fonctionnalités principales : recherche de dépanneurs, prise de rendez-vous, suivi en temps réel.</li>
-							<li>Automatisation des tests pour assurer une livraison sans bugs.</li>
-							<li>Déploiement de l'application sur le Play Store avec une documentation utilisateur détaillée.</li>
-						</ul>
-					</div>
-					<div class="results-section">
-						<h4>Résultats</h4>
-						<ul>
-							<li>Optimisation significative du délai moyen d'intervention.</li>
-							<li>Fort taux d'engagement utilisateur et de rétention sur le long terme.</li>
-						</ul>
-					</div>
-					<div class="technologies">
-						<span class="tech-tag">Kotlin</span>
-						<span class="tech-tag">Jetpack Compose</span>
-						<span class="tech-tag">Firebase</span>
-						<span class="tech-tag">Mapbox SDK</span>
-						<span class="tech-tag">Retrofit</span>
-						<span class="tech-tag">Gradle</span>
-						<span class="tech-tag">Android Espresso</span>
 					</div>
 				</div>
 
-			
-			</section>
-
-			<section class="section">
-				<h2 class="section-title">Formation</h2>
-				<div class="education-item">
-					<div class="education-header">
-						<h3>Licence en Génie Logiciel</h3>
-						<p class="school">Université Amadou Hampaté Ba</p>
-						<p class="date">2016 - 2019</p>
+				<div class="sidebar-section">
+					<h3 class="sidebar-title">Langues</h3>
+					<div class="language-list">
+						<div class="lang-item">
+							<span class="lang-name">Français</span>
+							<span class="lang-level">Natif</span>
+						</div>
+						<div class="lang-item">
+							<span class="lang-name">Anglais</span>
+							<span class="lang-level">Professionnel (C1)</span>
+						</div>
 					</div>
 				</div>
 
-				<div class="education-item">
-					<div class="education-header">
-						<h3>DUT en Génie Mécanique et Systèmes Industriels</h3>
-						<p class="school">École Supérieure Polytechnique de Dakar</p>
-						<p class="date">2015 - 2016</p>
+				<div class="sidebar-section education">
+					<h3 class="sidebar-title">Formation</h3>
+					<div class="edu-item">
+						<div class="edu-year">2016 - 2019</div>
+						<div class="edu-degree">Licence Génie Logiciel</div>
+						<div class="edu-school">Université Amadou Hampaté Ba</div>
+					</div>
+					<div class="edu-item">
+						<div class="edu-year">2015 - 2016</div>
+						<div class="edu-degree">DUT Génie Mécanique</div>
+						<div class="edu-school">ESP Dakar</div>
 					</div>
 				</div>
+				
+				<div class="sidebar-section interests">
+					<h3 class="sidebar-title">Intérêts</h3>
+					<div class="tags-wrapper">
+						<span class="tag light">Tech Watch</span>
+						<span class="tag light">Lecture</span>
+						<span class="tag light">Basket</span>
+					</div>
+				</div>
+			</aside>
+
+			<div class="main-content">
+				<section class="section profile-summary">
+					<h3 class="section-title">À Propos</h3>
+					<p>
+						Ingénieur Mobile Senior avec <strong>7+ ans d'expérience</strong>, spécialisé dans l'architecture d'applications critiques (FinTech, Logistique). Expert en modernisation d'applications (migration Java vers Kotlin/Compose) et en solutions <strong>Offline-first</strong> complexes.
+					</p>
+					<p>
+						Je combine une expertise technique approfondie avec une vision produit pragmatique. Passionné par l'efficience, j'intègre des <strong>workflows assistés par IA</strong> pour accélérer la livraison tout en maintenant des standards de qualité élevés.
+					</p>
 				</section>
 
-			<section class="section">
-				<h2 class="section-title">Centres d'intérêt</h2>
-				<div class="interests-grid">
-					<div class="tags-container">
-						<span class="tag">Lecture</span>
-						<span class="tag">Culture asiatique</span>
-						<span class="tag">Basketball</span>
-					</div>
+				<section class="section experience">
+					<h3 class="section-title">Expérience Professionnelle</h3>
+
+					<article class="exp-card">
+						<div class="exp-header">
+							<div>
+								<h4 class="exp-role">Consultant Développeur Android</h4>
+								<h5 class="exp-company">La Poste France <span class="badge">Consulting</span></h5>
+							</div>
+							<span class="exp-date">Oct 2025 - Présent</span>
+						</div>
+						<p class="exp-context">Intervention critique sur l'écosystème mobile "Preliv" utilisé par les facteurs.</p>
+						<ul class="exp-achievements">
+							<li><strong>Stabilisation critique</strong> du module "Colis District" : Audit approfondi, réduction de la dette technique (~40%) et correction des anomalies bloquantes.</li>
+							<li><strong>Méthodologie & Process</strong> : Travail en environnement Agile strict (Sprints de 2 semaines, Daily, Rétrospectives) avec revue de code systématique sur GitLab.</li>
+							<li>Conception et développement d'une application "Colis District" autonome en <strong>Kotlin & Jetpack Compose</strong> pour optimiser les performances sur terminaux durcis.</li>
+							<li>Mise en place d'une architecture réactive (Flow/Coroutines) et synchronisation temps réel via <strong>Firestore</strong>.</li>
+						</ul>
+						<div class="tech-stack-mini">
+							<span>Kotlin</span>
+							<span>Compose</span>
+							<span>Koin</span>
+							<span>Firebase</span>
+						</div>
+					</article>
+
+					<article class="exp-card">
+						<div class="exp-header">
+							<div>
+								<h4 class="exp-role">Consultant Expert Mobile & IA</h4>
+								<h5 class="exp-company">Obertys</h5>
+							</div>
+							<span class="exp-date">Sept 2024 - Présent</span>
+						</div>
+						<p class="exp-context">Mission stratégique de modernisation de la plateforme Marlodj (Gestion de Files d'Attente) et optimisation des processus R&D.</p>
+						<ul class="exp-achievements">
+							<li><strong>Augmentation de la vélocité</strong> via l'intégration de workflows de développement assistés par IA (Cursor, Antigravity, LLMs).</li>
+							<li>Refonte complète de l'UX/UI mobile et modernisation du backend avec développement d'un <strong>Backoffice moderne</strong>.</li>
+							<li>Conception d'une architecture <strong>Offline-first résiliente</strong> garantissant la continuité de service en zones à connectivité dégradée.</li>
+						</ul>
+						<div class="tech-stack-mini">
+							<span>Flutter</span>
+							<span>AI Operations</span>
+							<span>System Design</span>
+							<span>Offline-first</span>
+						</div>
+					</article>
+
+					<article class="exp-card">
+						<div class="exp-header">
+							<div>
+								<h4 class="exp-role">Développeur Android & Flutter</h4>
+								<h5 class="exp-company">Intouch (FinTech)</h5>
+							</div>
+							<span class="exp-date">Oct 2024 - Présent</span>
+						</div>
+						<p class="exp-context">Développement de l'écosystème de paiement digital "TouchPoint" et "Ting Business".</p>
+						<ul class="exp-achievements">
+							<li><strong>Projet TouchPoint AIO</strong> : App marchande principale avec système innovant de rendu monnaie et gestion de fidélité avancée (Points & Récompenses).</li>
+							<li><strong>Projet Ting Business</strong> (Flutter) : Refonte moderne avec intégration <strong>Tap to Pay</strong> (Visa/Cybersource) et interopérabilité BCEAO (Paiement Pi).</li>
+							<li><strong>Projet Onboarding</strong> : App Flutter pour les commerciaux avec configuration de QR Code marchands et optimisation du parcours terrain.</li>
+							<li>Garantie de la conformité aux normes sécuritaires bancaires (PCI-DSS standards) pour les transactions sensibles.</li>
+						</ul>
+						<div class="tech-stack-mini">
+							<span>Clean Arch</span>
+							<span>Bloc</span>
+							<span>Payment APIs</span>
+							<span>Security</span>
+						</div>
+					</article>
+
+					<article class="exp-card">
+						<div class="exp-header">
+							<div>
+								<h4 class="exp-role">Consultant Android</h4>
+								<h5 class="exp-company">Kajou</h5>
+							</div>
+							<span class="exp-date">Déc 2023 - Déc 2024</span>
+						</div>
+						<p class="exp-context">Innovation EdTech : Accès aux contenus éducatifs sans internet via carte SD.</p>
+						<ul class="exp-achievements">
+							<li>Développement du système de lecture de contenu sécurisé depuis le stockage externe (Storage Access Framework).</li>
+							<li>Implémentation du partage de contenu "Device-to-Device" via <strong>Bluetooth & Wi-Fi Direct</strong>.</li>
+							<li>Optimisation drastique de la consommation mémoire pour les terminaux "Low-End".</li>
+							<li>Participation active aux cérémonies <strong>Agile Scrum</strong> et collaboration étroite avec les équipes Produit et QA via Jira.</li>
+						</ul>
+					</article>
+
+					<article class="exp-card">
+						<div class="exp-header">
+							<div>
+								<h4 class="exp-role">Développeur Android Senior</h4>
+								<h5 class="exp-company">ATOS / La Poste</h5>
+							</div>
+							<span class="exp-date">Avr 2023 - Sept 2024</span>
+						</div>
+						<ul class="exp-achievements">
+							<li>Maintenance évolutive d'applications à fort trafic pour La Poste Française.</li>
+							<li>Développement de l'application "MoveEase" (Transport Dakar) : Cartographie temps réel (Google Maps SDK) et calcul d'itinéraires.</li>
+							<li>Création d'une application "Coffre-Fort" numérique hautement sécurisée (Encryption, Biométrie).</li>
+						</ul>
+					</article>
+
+					<article class="exp-card">
+						<div class="exp-header">
+							<div>
+								<h4 class="exp-role">Lead Mobile Developer (Evolution)</h4>
+								<h5 class="exp-company">Obertys</h5>
+							</div>
+							<span class="exp-date">Nov 2019 - Avr 2023</span>
+						</div>
+						<p class="exp-context">Évolution de Développeur à Lead. Supervision technique de solutions bancaires déployées dans 5+ pays africains.</p>
+						<ul class="exp-achievements">
+							<li><strong>Leadership Technique & Agile</strong> : Définition des standards (Clean Arch), mentoring technique et animation des rituels Scrum (Planning, Daily) pour l'équipe mobile.</li>
+							<li><strong>Projet Marlodj</strong> : Ecosystème de file d'attente complet (Borne Interactive, Android TV avec Synthèse Vocale, App Mobile Client Flutter).</li>
+							<li><strong>Projet Customer Corner</strong> : Solution KYC/Enrôlement 100% Offline (Android Java) avec OCR embarqué pour lecture automatique de documents.</li>
+							<li>Réduction significative des bugs de production grâce à l'introduction des tests unitaires et d'intégration systématiques.</li>
+						</ul>
+					</article>
+				</section>
 			</div>
-			</section>
-		</article>
+		</div>
 	</main>
 </Layout>
 
@@ -558,323 +256,496 @@ import Layout from '../layouts/Layout.astro';
 	declare const html2pdf: any;
 	document.getElementById('downloadPDF').addEventListener('click', async function() {
 		const element = document.querySelector('.cv-container');
+		const btn = this;
 		
-		// Configuration simple pour éviter les erreurs
+		// Feedback visuel
+		const originalText = btn.innerHTML;
+		btn.innerHTML = '<span>Génération...</span>';
+		btn.style.opacity = '0.7';
+
 		const opt = {
 			margin: 0,
-			filename: 'cv.pdf',
+			filename: 'Ousmane_Sakho_CV_Senior_Mobile.pdf',
 			image: { type: 'jpeg', quality: 0.98 },
 			html2canvas: { 
-				scale: 3,
-				useCORS: true,
+				scale: 2, // Meilleur compromis poids/qualité
+				useCORS: true, 
 				letterRendering: true,
-				scrollY: 0,
-				windowWidth: document.documentElement.offsetWidth, // Set the window width
-				windowHeight: document.documentElement.offsetHeight
-				
+				scrollY: 0
 			},
-			jsPDF: { 
-				unit: 'mm', 
-				format: 'a4', 
-				orientation: 'portrait',
-				compressPDF: true // Enable PDF compressio
-			}
+			jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
 		};
 
 		try {
-			// Utilisation de la méthode simple
 			await html2pdf().from(element).set(opt).save();
 		} catch (error) {
-			console.error('Error generating PDF:', error);
+			console.error('PDF Error:', error);
+			alert("Erreur lors de la génération du PDF.");
+		} finally {
+			btn.innerHTML = originalText;
+			btn.style.opacity = '1';
 		}
 	});
 </script>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 	:root {
-		--primary: #2563eb;
-		--primary-dark: #1e40af;
-		--text-main: #111827;
-		--text-secondary: #374151;
-		--bg-light: #f8fafc;
-		--border-light: #e5e7eb;
-		--section-spacing: 2.5rem;
-		--item-spacing: 1.5rem;
-		--container-width: 900px;
+		--primary: #4f46e5;      /* Indigo 600 */
+		--primary-dark: #3730a3; /* Indigo 800 */
+		--primary-light: #e0e7ff; /* Indigo 100 */
+		--accent: #0ea5e9;       /* Sky 500 */
+		
+		--text-main: #0f172a;    /* Slate 900 */
+		--text-muted: #475569;   /* Slate 600 */
+		--text-light: #64748b;   /* Slate 500 */
+		
+		--bg-body: #f1f5f9;      /* Slate 100 */
+		--bg-card: #ffffff;
+		--bg-sidebar: #f8fafc;   /* Slate 50 */
+		
+		--border: #e2e8f0;       /* Slate 200 */
+		--shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+		--shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 	}
+
+	* { box-sizing: border-box; }
 
 	body {
 		font-family: 'Plus Jakarta Sans', sans-serif;
 		color: var(--text-main);
-		line-height: 1.7;
-		background: var(--bg-light);
-		font-size: 17px;
+		line-height: 1.5;
+		background: var(--bg-body);
+		margin: 0;
+		font-size: 14px;
+	}
+
+	.page-wrapper {
+		min-height: 100vh;
+		padding: 2rem;
+		display: flex;
+		justify-content: center;
 	}
 
 	.cv-container {
-		width: var(--container-width);
-		margin: 2rem auto;
-		background: white;
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-		position: relative;
-		padding: 3rem;
+		width: 100%;
+		max-width: 1000px;
+		background: var(--bg-card);
+		display: grid;
+		grid-template-columns: 320px 1fr; /* Sidebar width fixed, rest flexible */
+		box-shadow: var(--shadow-md);
+		min-height: 1123px; /* A4 height approx for visual preview */
 	}
 
-	.header {
-		text-align: center;
-		margin-bottom: var(--section-spacing);
-		padding-bottom: var(--section-spacing);
-		border-bottom: 1px solid var(--border-light);
+	/* --- Sidebar Styles --- */
+	.sidebar {
+		background: var(--bg-sidebar);
+		padding: 2.5rem 2rem;
+		border-right: 1px solid var(--border);
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
+
+	.profile-header {
+		text-align: left;
 	}
 
 	.profile-image {
-		width: 150px;
-		height: 150px;
-		background: var(--primary);
-		color: white;
-		border-radius: 75px;
+		width: 80px;
+		height: 80px;
+		background: linear-gradient(135deg, var(--primary), var(--accent));
+		border-radius: 20px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 3.5rem;
-		font-weight: 600;
-		margin: 0 auto var(--item-spacing);
+		color: white;
+		font-size: 1.8rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+		box-shadow: var(--shadow-sm);
 	}
 
-	.profile-info h1 {
-		font-size: 3.2rem;
+	.name {
+		font-size: 2rem;
+		font-weight: 800;
+		line-height: 1.1;
+		margin: 0 0 0.5rem 0;
 		color: var(--text-main);
-		margin: 0;
-		font-weight: 700;
-		line-height: 1.2;
 		letter-spacing: -0.02em;
 	}
 
-	.profile-info .title {
-		font-size: 1.7rem;
+	.job-title {
+		font-size: 1.1rem;
 		color: var(--primary);
-		margin: 0.7rem 0;
 		font-weight: 600;
+		margin: 0 0 0.5rem 0;
 	}
 
-	.profile-info .subtitle {
-		color: var(--text-secondary);
-		font-size: 1.3rem;
-		line-height: 1.5;
-		max-width: 600px;
-		margin: 1rem auto;
+	.verification-badge {
+		font-size: 0.85rem;
+		color: var(--text-muted);
+		background: var(--primary-light);
+		display: inline-block;
+		padding: 0.25rem 0.75rem;
+		border-radius: 99px;
+		font-weight: 500;
+		margin: 0;
 	}
 
-	.contact-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+	.sidebar-section {
+		display: flex;
+		flex-direction: column;
 		gap: 1rem;
-		max-width: 600px;
-		margin: var(--section-spacing) auto;
+	}
+
+	.sidebar-title {
+		font-size: 0.85rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: var(--text-light);
+		font-weight: 700;
+		margin: 0 0 0.5rem 0;
+		border-bottom: 2px solid var(--border);
+		padding-bottom: 0.5rem;
 	}
 
 	.contact-item {
 		display: flex;
-		align-items: center;
-		gap: 0.8rem;
-		color: var(--text-secondary);
-		font-size: 1.1rem;
+		align-items: flex-start;
+		gap: 0.75rem;
+		font-size: 0.95rem;
+		color: var(--text-muted);
+		line-height: 1.4;
 	}
 
-	.section {
-		margin-bottom: var(--section-spacing);
-		padding-bottom: var(--section-spacing);
-		border-bottom: 1px solid var(--border-light);
+	.contact-item a {
+		color: inherit;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+	
+	.contact-item a:hover {
+		color: var(--primary);
+		text-decoration: underline;
 	}
 
-	.section-title {
-		color: var(--primary-dark);
-		font-size: 1.8rem;
-		margin: 0 0 var(--item-spacing);
-		font-weight: 700;
-		padding-bottom: 0.7rem;
-		border-bottom: 2px solid var(--primary);
-		letter-spacing: -0.01em;
+	.contact-item .icon {
+		opacity: 0.7;
+		flex-shrink: 0;
 	}
 
-	.expertise-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: var(--item-spacing);
-		margin-bottom: var(--item-spacing);
-	}
-
-	.expertise-category h3 {
+	.skill-group h4 {
+		font-size: 0.9rem;
+		margin: 0 0 0.5rem 0;
 		color: var(--text-main);
-		font-size: 1.3rem;
-		margin: 0 0 1rem;
 		font-weight: 600;
 	}
 
-	.tags-container {
+	.tags-wrapper {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.5rem;
 	}
 
 	.tag {
-		background: var(--bg-light);
-		color: var(--text-main);
-		padding: 0.5rem 1rem;
+		font-size: 0.8rem;
+		padding: 0.3rem 0.6rem;
 		border-radius: 6px;
-		font-size: 1.05rem;
+		background: white;
+		border: 1px solid var(--border);
+		color: var(--text-muted);
 		font-weight: 500;
 	}
 
-	.tag.advanced {
+	.tag.filled {
 		background: var(--primary);
+		border-color: var(--primary);
 		color: white;
 	}
-
-	.languages-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: var(--item-spacing);
+	
+	.tag.light {
+		background: transparent;
+		border-color: transparent;
+		background: #e2e8f0;
 	}
 
-	.language-item p {
-		margin: 0 0 0.5rem;
+	.language-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.8rem;
+	}
+
+	.lang-item {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.lang-name {
+		font-weight: 600;
 		color: var(--text-main);
-		font-weight: 500;
-		font-size: 1.1rem;
+		font-size: 0.95rem;
 	}
 
-	.level-bar {
-		height: 8px;
-		background: var(--bg-light);
-		border-radius: 4px;
+	.lang-level {
+		font-size: 0.85rem;
+		color: var(--text-light);
 	}
 
-	.level-fill {
-		height: 100%;
+	.edu-item {
+		margin-bottom: 0.5rem;
+	}
+
+	.edu-year {
+		font-size: 0.8rem;
+		color: var(--text-light);
+	}
+	
+	.edu-degree {
+		font-weight: 600;
+		color: var(--text-main);
+		font-size: 0.95rem;
+	}
+	
+	.edu-school {
+		font-size: 0.9rem;
+		color: var(--text-muted);
+	}
+
+	/* --- Main Content Styles --- */
+	.main-content {
+		padding: 3rem;
+		background: white;
+	}
+
+	.section-title {
+		font-size: 1.4rem;
+		color: var(--text-main);
+		font-weight: 700;
+		margin: 0 0 1.5rem 0;
+		position: relative;
+		padding-bottom: 0.5rem;
+	}
+
+	.section-title::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 40px;
+		height: 3px;
 		background: var(--primary);
-		border-radius: 4px;
+		border-radius: 2px;
 	}
 
-	.experience-item {
-		margin-bottom: var(--section-spacing);
+	.profile-summary p {
+		color: var(--text-muted);
+		font-size: 1.05rem;
+		margin-bottom: 1rem;
+		line-height: 1.6;
 	}
-
-	.experience-header {
-		margin-bottom: var(--item-spacing);
-	}
-
-	.experience-header h3 {
-		color: var(--text-main);
-		font-size: 1.5rem;
-		margin: 0;
+	
+	.profile-summary strong {
+		color: var(--primary-dark);
 		font-weight: 600;
 	}
 
-	.company {
+	.section.experience {
+		margin-top: 3rem;
+	}
+
+	.exp-card {
+		margin-bottom: 2.5rem;
+		position: relative;
+		padding-left: 1.5rem;
+		border-left: 2px solid var(--border);
+	}
+	
+	.exp-card::before {
+		content: '';
+		position: absolute;
+		left: -6px;
+		top: 0;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: var(--primary);
+		border: 2px solid white;
+		box-shadow: 0 0 0 2px var(--primary-light);
+	}
+
+	.exp-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		margin-bottom: 0.5rem;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.exp-role {
+		font-size: 1.15rem;
+		margin: 0;
+		color: var(--text-main);
+		font-weight: 700;
+	}
+
+	.exp-company {
+		font-size: 1rem;
+		margin: 0.2rem 0 0 0;
 		color: var(--primary);
 		font-weight: 600;
-		margin: 0.5rem 0;
-		font-size: 1.2rem;
-	}
-
-	.date {
-		color: var(--text-secondary);
-		font-size: 1.05rem;
-		font-weight: 500;
-	}
-
-	.context {
-		color: var(--text-secondary);
-		font-size: 1.15rem;
-		line-height: 1.7;
-		margin: var(--item-spacing) 0;
-	}
-
-	.project-section {
-		margin: var(--item-spacing) 0;
-	}
-
-	.project-section h4 {
-		color: var(--text-main);
-		font-size: 1.3rem;
-		margin: 0 0 0.8rem;
-		font-weight: 600;
-	}
-
-	ul {
-		margin: 0.8rem 0;
-		padding-left: 1.5rem;
-	}
-
-	li {
-		margin-bottom: 0.6rem;
-		color: var(--text-secondary);
-		line-height: 1.6;
-		font-size: 1.05rem;
-	}
-
-	.technologies {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 0.7rem;
-		margin-top: var(--item-spacing);
-		padding-top: var(--item-spacing);
-		border-top: 1px solid var(--border-light);
+		align-items: center;
+		gap: 0.5rem;
 	}
 
-	.tech-tag {
-		background: var(--bg-light);
-		color: var(--text-main);
-		padding: 0.5rem 1rem;
-		border-radius: 6px;
-		font-size: 1rem;
+	.exp-company .badge {
+		font-size: 0.7rem;
+		background: var(--bg-body);
+		color: var(--text-light);
+		padding: 2px 6px;
+		border-radius: 4px;
 		font-weight: 500;
+		text-transform: uppercase;
 	}
 
+	.exp-date {
+		font-size: 0.9rem;
+		color: var(--text-light);
+		font-weight: 500;
+		white-space: nowrap;
+	}
+
+	.exp-context {
+		font-size: 0.95rem;
+		color: var(--text-muted);
+		font-style: italic;
+		margin: 0.5rem 0 0.8rem 0;
+	}
+
+	.exp-achievements {
+		margin: 0;
+		padding-left: 1rem;
+	}
+
+	.exp-achievements li {
+		color: var(--text-muted);
+		margin-bottom: 0.4rem;
+		font-size: 0.95rem;
+	}
+	
+	.exp-achievements li strong {
+		color: var(--text-main);
+	}
+
+	.tech-stack-mini {
+		display: flex;
+		gap: 0.5rem;
+		margin-top: 0.8rem;
+		flex-wrap: wrap;
+	}
+
+	.tech-stack-mini span {
+		font-size: 0.75rem;
+		color: var(--text-light);
+		background: var(--bg-body);
+		padding: 2px 8px;
+		border-radius: 4px;
+	}
+
+	/* --- Button --- */
 	.download-pdf-btn {
 		position: fixed;
 		bottom: 2rem;
 		right: 2rem;
-		background: var(--primary);
+		background: var(--text-main);
 		color: white;
 		border: none;
-		padding: 0.9rem 1.8rem;
-		border-radius: 6px;
+		padding: 0.8rem 1.5rem;
+		border-radius: 50px;
 		cursor: pointer;
-		font-weight: 500;
+		font-weight: 600;
 		display: flex;
 		align-items: center;
-		gap: 0.7rem;
-		font-size: 1.1rem;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		gap: 0.5rem;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+		transition: transform 0.2s, background 0.2s;
+		z-index: 100;
 	}
 
+	.download-pdf-btn:hover {
+		transform: translateY(-2px);
+		background: black;
+	}
+
+	/* --- Responsive --- */
+	@media (max-width: 900px) {
+		.cv-container {
+			grid-template-columns: 1fr;
+			max-width: 600px;
+		}
+
+		.sidebar {
+			border-right: none;
+			border-bottom: 1px solid var(--border);
+			padding: 2rem;
+		}
+		
+		.main-content {
+			padding: 2rem;
+		}
+		
+		.profile-header {
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.page-wrapper { padding: 0.5rem; }
+		.main-content, .sidebar { padding: 1.5rem; }
+		.exp-header { flex-direction: column; }
+		.download-pdf-btn span { display: none; }
+		.download-pdf-btn { padding: 0.8rem; border-radius: 50%; }
+	}
+
+	/* --- Print Styles --- */
 	@media print {
-		body {
-			background: white;
-			font-size: 12pt;
+		@page { margin: 0; size: auto; }
+		
+		body { 
+			background: white; 
+			-webkit-print-color-adjust: exact; 
+			print-color-adjust: exact;
+		}
+
+		.page-wrapper {
+			padding: 0;
+			display: block;
 		}
 
 		.cv-container {
-			margin: 0;
 			box-shadow: none;
-			width: 100%;
-			padding: 2rem;
+			max-width: 100%;
+			grid-template-columns: 280px 1fr !important; /* Force sidebar layout on print */
+		}
+		
+		.sidebar {
+			background-color: #f8fafc !important; /* Force background color */
 		}
 
-		.download-pdf-btn {
-			display: none;
+		.download-pdf-btn { display: none; }
+		
+		/* Avoid breaking cards */
+		.exp-card { 
+			page-break-inside: avoid; 
+			break-inside: avoid;
 		}
-
-		.section {
-			page-break-inside: avoid;
-		}
-
-		.experience-item {
-			page-break-inside: avoid;
-		}
+		
+		a { text-decoration: none; color: inherit; }
 	}
 </style>
