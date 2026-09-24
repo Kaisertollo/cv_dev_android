@@ -715,7 +715,10 @@ import Layout from '../layouts/Layout.astro';
 
 	/* --- Print Styles --- */
 	@media print {
-		@page { margin: 0; size: auto; }
+		@page { 
+			margin: 0; 
+			size: auto; 
+		}
 		
 		body { 
 			background: white; 
@@ -731,21 +734,49 @@ import Layout from '../layouts/Layout.astro';
 		.cv-container {
 			box-shadow: none;
 			max-width: 100%;
-			grid-template-columns: 280px 1fr !important; /* Force sidebar layout on print */
+			/* Utiliser block plutôt que grid pour l'impression si le navigateur gère mal le grid break */
+			display: grid;
+			grid-template-columns: 280px 1fr !important;
+			min-height: auto;
 		}
 		
 		.sidebar {
-			background-color: #f8fafc !important; /* Force background color */
+			background-color: #f8fafc !important;
+			height: 100%; /* S'assure que la couleur va jusqu'en bas */
+			padding-bottom: 500px; /* Hack visuel pour prolonger la couleur si la sidebar est plus courte */
+			margin-bottom: -500px;
+		}
+
+		.main-content {
+			height: 100%;
 		}
 
 		.download-pdf-btn { display: none; }
 		
-		/* Avoid breaking cards */
-		.exp-card { 
-			page-break-inside: avoid; 
+		/* INSECABLES : Empêcher les coupures au milieu de ces blocs */
+		.sidebar-section, 
+		.section-title,
+		.profile-header,
+		h3 { 
 			break-inside: avoid;
+			page-break-inside: avoid; 
+			page-break-before: auto;
+			page-break-after: auto;
+		}
+
+		.exp-card {
+			break-inside: avoid;
+			page-break-inside: avoid;
+			/* Ajouter de l'espace pour que si ça tombe en haut de page, ça ne soit pas collé */
+			margin-bottom: 3rem; 
+			padding-top: 1rem; /* Petit espace interne de sécurité */
 		}
 		
+		/* Espacer davantage les titres en sidebar aussi */
+		.sidebar-section {
+			margin-bottom: 2.5rem;
+		}
+
 		a { text-decoration: none; color: inherit; }
 	}
 </style>
